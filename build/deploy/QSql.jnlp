@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="QSql.jnlp">
+  <information>
+    <title>QSql</title>
+    <vendor>Sumit Goyal</vendor>
+    <description>QSQL</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="QSql.jar" size="55365" download="eager" />
+    <jar href="libs\commons-collections4-4.1.jar" size="751238" download="eager" />
+    <jar href="libs\composer.jar" size="960927" download="eager" />
+    <jar href="libs\curvesapi-1.04.jar" size="98365" download="eager" />
+    <jar href="libs\jt400.jar" size="4767382" download="eager" />
+    <jar href="libs\jt400Proxy.jar" size="750152" download="eager" />
+    <jar href="libs\jt400Servlet.jar" size="373006" download="eager" />
+    <jar href="libs\jt400android.jar" size="3554829" download="eager" />
+    <jar href="libs\jtopenlite.jar" size="499046" download="eager" />
+    <jar href="libs\jui400.jar" size="548275" download="eager" />
+    <jar href="libs\outputwriters.jar" size="566315" download="eager" />
+    <jar href="libs\poi-3.15.jar" size="2579580" download="eager" />
+    <jar href="libs\poi-excelant-3.15.jar" size="31364" download="eager" />
+    <jar href="libs\poi-ooxml-3.15.jar" size="1338241" download="eager" />
+    <jar href="libs\poi-ooxml-schemas-3.15.jar" size="5859007" download="eager" />
+    <jar href="libs\poi-scratchpad-3.15.jar" size="1324935" download="eager" />
+    <jar href="libs\reportwriter.jar" size="8062" download="eager" />
+    <jar href="libs\tes.jar" size="1186224" download="eager" />
+    <jar href="libs\uitools.jar" size="987341" download="eager" />
+    <jar href="libs\util400.jar" size="287555" download="eager" />
+    <jar href="libs\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="application.Main"  name="QSQL" />
+  <update check="background"/>
+</jnlp>

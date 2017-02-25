@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <center>
+      <Accordion fx:id="accordionList" prefHeight="524.0" prefWidth="880.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane fx:id="paneServer" animated="false" onKeyPressed="#serverPaneKeyPress" text="QSql : By Sumit Goyal QSys400.com ">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="334.0" minHeight="10.0" percentHeight="36.0" prefHeight="230.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="482.0" minHeight="10.0" percentHeight="64.0" prefHeight="452.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="serverList" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                          <columns>
+                              <TableColumn fx:id="listServerId" prefWidth="47.0" text="Id" />
+                            <TableColumn fx:id="listServerName" prefWidth="108.0" text="Server Name" />
+                            <TableColumn fx:id="listServerIp" prefWidth="101.0" text="IP" />
+                              <TableColumn fx:id="listUserName" prefWidth="111.0" text="User Name" />
+                              <TableColumn fx:id="listServerNaming" prefWidth="111.0" text="Naming" />
+                          </columns>
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TableView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+                        <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" percentWidth="60.0" prefWidth="270.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" percentWidth="40.0" prefWidth="214.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" percentWidth="35.0" prefWidth="203.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" percentWidth="65.0" prefWidth="281.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Configuration" wrappingWidth="227.13671875">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Server Name" wrappingWidth="88.861328125" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Server IP*" wrappingWidth="191.068359375" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Name*" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="85.171875" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Label text="Naming" visible="false" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="serverName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Consolas" size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="serverIp" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Consolas" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="serverUser" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Consolas" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <PasswordField fx:id="serverPassword" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font name="Consolas" size="16.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <RadioButton fx:id="namingSYSTEM" mnemonicParsing="false" selected="true" text="SYSTEM" visible="false">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="SQLnaming" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="namingSQL" mnemonicParsing="false" text="SQL" toggleGroup="$SQLnaming" visible="false">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="10.0" />
+                                             </HBox.margin>
+                                          </RadioButton>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <children>
+                                          <Button fx:id="serverSave" mnemonicParsing="false" onAction="#serverSave" text="Save [S]" underline="true">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="serverConnect" defaultButton="true" mnemonicParsing="false" onAction="#serverConnect" text="Connect [C]" underline="true">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="serverId" maxHeight="10.0" maxWidth="10.0" prefHeight="10.0" prefWidth="10.0" visible="false" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="80.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <Button fx:id="serverClear" mnemonicParsing="false" onAction="#serverClear" text="Clear" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="238.0" text="Lib List [*Press ENTER]">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="Libl" editable="true" prefHeight="200.0" prefWidth="200.0">
+                                       <opaqueInsets>
+                                          <Insets right="5.0" />
+                                       </opaqueInsets>
+                                    </ListView>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                        <WebView fx:id="helpPage" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowSpan="2" />
+                     </children>
+                  </GridPane>
+               </content>
+          </TitledPane>
+          <TitledPane fx:id="paneSQL" animated="false" onKeyReleased="#keyPress" text="Run SQL : [NOT CONNECTED]">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="752.0" minWidth="10.0" percentWidth="75.0" prefWidth="715.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" percentWidth="25.0" prefWidth="253.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="468.0" minHeight="10.0" percentHeight="100.0" prefHeight="468.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane fx:id="aboutGrid" GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="109.0" minHeight="0.0" percentHeight="6.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="346.0" minHeight="10.0" percentHeight="6.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="360.0" minHeight="10.0" percentHeight="88.0" prefHeight="360.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="sqlLib" prefHeight="32.0" prefWidth="200.0" promptText="Lib">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="sqlObject" prefHeight="32.0" prefWidth="200.0" promptText="Object Name">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin></TextField>
+                                    <ComboBox fx:id="sqlObjectType" prefHeight="32.0" prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="loadDetails" defaultButton="true" mnemonicParsing="false" onAction="#loadDetails" text="Load Details [D]">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="loadClear" mnemonicParsing="false" onAction="#loadClear" text="Clear">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <VBox fx:id="aboutVbox" style="-fx-border-color: #CFCAC9; -fx-border-width: 1px;" GridPane.rowIndex="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Accordion fx:id="resultAccordion" GridPane.rowIndex="1">
+                                <panes>
+                                  <TitledPane fx:id="resultLog" animated="false" text="Log">
+                                       <content>
+                                          <TextArea fx:id="resultMessage" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding></TextArea>
+                                       </content>
+                                  </TitledPane>
+                                </panes>
+                              </Accordion>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextArea fx:id="sqlText" prefHeight="254.0" prefWidth="678.0" />
+                                    <HBox prefHeight="56.0" prefWidth="678.0">
+                                       <children>
+                                          <HBox prefHeight="36.0" prefWidth="292.0">
+                                             <children>
+                                                <Button fx:id="sqlDownloadXLS" mnemonicParsing="false" onAction="#sqlDownloadXLS" prefHeight="25.0" prefWidth="117.0" text="Download XLS [E]">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Hyperlink onAction="#openXLS" prefHeight="23.0" prefWidth="152.0" fx:id="xlsDownloadLink">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="36.0" prefWidth="553.0">
+                                             <children>
+                                                <Button fx:id="sqlClear" mnemonicParsing="false" onAction="#sqlClear" text="Clear [C]">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="sqlRun" defaultButton="true" mnemonicParsing="false" onAction="#sqlRun" prefHeight="25.0" prefWidth="59.0" text="Run [R]">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField editable="false" prefHeight="25.0" prefWidth="355.0" text="F3 = EXIT     F9 = PREVIOUS     F10 = NEXT">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+   <bottom>
+      <TextField fx:id="notification" editable="false" prefHeight="37.0" prefWidth="880.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>
